@@ -1,0 +1,681 @@
+.elementos-tutorial {
+    border: 5px dashed #ffffff1a !important;
+    opacity: 0;
+    transition-duration: 5s;
+}
+
+.btn {
+    display: block;
+    background-color: transparent;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    padding: 20px 30px;
+    transition-duration: .5s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: inset 0px 0px 10px 1px #fff,
+        0px 0px 10px 1px #fff;
+}
+
+.btn-voltar-tela-inicial {
+    font-size: 1.5vw;
+    border: 0.5vw solid #fff
+}
+
+#btn-voltar-v-gm {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+#div-relogio-bateria {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: var(--z-drb-pause-btnmc);
+}
+
+#div-relogio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#div-bateria {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#div-uso {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+#bateria-p,
+#div-uso p {
+    font-size: 12px;
+}
+
+.barra {
+    width: 10px;
+    height: 15px;
+}
+
+#btn-mute {
+    background-color: #55555580;
+    color: #ddd;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-size: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition-duration: .5s;
+}
+
+#btn-mute:hover {
+    background-color: #77777780;
+    box-shadow: 0px 0px 20px 0px #666666;
+}
+
+#btn-pause,
+#btn-close-pause {
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    top: 10px;
+    right: 10px;
+    z-index: var(--z-drb-pause-btnmc);
+}
+
+#btn-pause span {
+    font-size: 25px;
+    color: #fff;
+}
+
+#voltar-vitoria {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 15px;
+    z-index: var(--z-elementos-sobrepostos);
+}
+
+#vitoria-img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: var(--z-elementos-sobrepostos);
+    height: 75vh;
+}
+
+#div-btn-left,
+#div-btn-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#div-btn-left {
+    left: 0;
+}
+
+#div-btn-right {
+    right: 0;
+}
+
+#div2-btn-left,
+#div2-btn-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 95%;
+    height: calc(100% - 150px);
+    
+}
+
+#div2-btn-left {
+    justify-content: flex-end;
+}
+
+#div2-btn-right {
+    justify-content: flex-start;
+}
+
+.btn-lr-tutorial {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.btn-lr-tutorial p {
+    color: #ffffff1a;
+    text-align: center;
+}
+
+#btn-left-left-left,
+#btn-right-right-right {
+    position: absolute;
+    height: 100%;
+    width: 105%;
+}
+
+#btn-left-left-left {
+    left: -50px;
+    right: inherit;
+}
+
+#btn-right-right-right {
+    left: inherit;
+    right: -50px;
+}
+
+#btn-left-left,
+#btn-left,
+#btn-right,
+#btn-right-right {
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#div-btn-luz {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#div-btn-luz-tutorial {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 115px;
+    height: 115px;
+    padding-top: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#btn-luz-tutorial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#btn-luz-tutorial::before {
+    content: 'Segure mouse / tecla espaco';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    text-align: center;
+    color: #ffffff1a;
+}
+
+#btn-luz {
+    width: 75px;
+    height: 75px;
+    background-image: radial-gradient(#5f5f5f, #3b3b3b);
+    outline: none;
+    border: 10px solid #222;
+    border-radius: 5px;
+    transform: perspective(150px) rotateX(45deg);
+    z-index: 2;
+}
+
+#btn-luz-cabo {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 80px;
+    background-image: linear-gradient(to left, #3b3b3b, #5f5f5f, #3b3b3b);
+    z-index: 1;
+}
+
+#btn-luz.active {
+    background-image: radial-gradient(#D0D1E2, #8189AB);
+}
+
+#div-mas-cam-luz {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#div-btn-mascara,
+#div-btn-camera {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc(8vh + 20px);
+    width: calc(30vw + 20px);
+    background-color: transparent;
+}
+
+#btn-mascara-tutorial,
+#btn-camera-tutorial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 1;
+    transition-duration: 5s;
+}
+
+#btn-mascara-tutorial:before,
+#btn-camera-tutorial:before {
+    content: 'Deslize o mouse';
+    color: #ffffff1a;
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#btn-mascara,
+#btn-camera {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 8vh;
+    margin: 10px 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    z-index: var(--z-drb-pause-btnmc);
+}
+
+#btn-mascara {
+    background-color: #ff00001a;
+    border: 2.5px solid #ff00004d;
+}
+
+#btn-camera {
+    background-color: #ffffff1a;
+    border: 2.5px solid #ffffff4d;
+}
+
+#mascara-img {
+    position: absolute;
+    width: 101%;
+    transform: translateY(-100%) rotateX(45deg);
+    transition-duration: .25s;
+    z-index: 2;
+}
+
+#camera-img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    border: 5px solid #555;
+    border-radius: 30px;
+    transition-duration: 0.25s;
+    transform: perspective(400px) translateY(100%) rotateX(90deg);
+    z-index: 5;
+}
+
+.seta-cima,
+.seta-baixo {
+    position: absolute;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    transform: translate(-50%, -50%) rotateZ(135deg) skew(40deg, 40deg);
+    border-top: 15px solid #ffffff4d;
+    border-left: 15px solid #fff0;
+    border-bottom: 15px solid #fff0;
+    border-right: 15px solid #ffffff4d;
+}
+
+.seta-cima {
+    top: 30%;
+}
+
+.seta-baixo {
+    top: 50%;
+}
+
+#btn-mascara .seta-cima,
+#btn-mascara .seta-baixo {
+    border-top: 15px solid #ff00004d;
+    border-right: 15px solid #ff00004d;
+}
+
+#btn-camera .seta-cima,
+#btn-camera .seta-baixo {
+    border-top: 15px solid #ffffff4d;
+    border-right: 15px solid #ffffff4d;
+}
+
+#video-chiado-cam {
+    z-index: 15;
+}
+
+#div-music-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-elementos-sobrepostos);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+#div-tutorial-music-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#btn-music-box {
+    background-color: #444;
+    border: 1px solid #fff;
+    padding: 0px 5px;
+    color: #fff;
+    font-family: 'titulo', sans-serif;
+    text-align: center;
+    pointer-events: none;
+}
+
+#tutorial-music-box {
+    content: 'Clique e segure';
+    color: #fff;
+    font-size: 12px;
+}
+
+#alerta,
+#alerta-cam {
+    position: absolute;
+    height: 5vh;
+    animation: pisca-alerta .5s linear infinite;
+    animation-timing-function: steps(1);
+    opacity: 0;
+}
+
+@keyframes pisca-alerta {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#alerta {
+    bottom: 20px;
+    right: 40px;
+    z-index: 5;
+}
+
+#alerta-cam {
+    bottom: 74%;
+    left: 10px;
+    z-index: 20;
+}
+
+#input-zoom {
+    -webkit-appearance: none;
+    appearance: none;
+
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+}
+
+#input-zoom::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    background-color: #fff;
+    margin-top: -7.5px;
+    box-shadow: 2px 2px 5px 0px #000;
+}
+
+#input-zoom::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background-color: #fff;
+    height: 5px;
+    box-shadow: 2px 2px 5px 0px #000;
+}
+
+#input-zoom::before,
+#input-zoom::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+#input-zoom::before {
+    content: '-';
+    right: 105%;
+}
+
+#input-zoom::after {
+    content: '+';
+    left: 105%;
+}
+
+#mapa-absolute {
+    position: absolute;
+    bottom: 75px;
+    right: 10vw;
+    width: 30vw;
+    height: 30vw;
+    z-index: 20;
+}
+
+#mapa-relative {
+    position: relative;
+}
+
+#mapa-relative #mapa-img {
+    width: 100%;
+}
+
+#mapa-p {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3vh;
+    line-height: 5vh;
+    width: 40%;
+}
+
+#btn-luz-cam {
+    width: 50vw;
+    height: calc(100vh - 120px);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: 5s;
+    opacity: 0;
+    z-index: 19;
+}
+
+#btn-luz-cam p, #btn-luz-cam ul li {
+    color: #ffffff1a;
+    font-size: 2vh;
+}
+
+#btn-luz-cam p {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#btn-luz-cam ul {
+    margin-top: 5px;
+}
+
+#btn-luz-cam ul li {
+    margin-top: 5px;
+    text-align: left;
+}
+
+.cameras {
+    position: absolute;
+    background-color: transparent;
+    border: 2.5px solid #fff;
+    color: #fff;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+}
+
+.cameras.active {
+    animation: anima-bg 1s linear infinite;
+    animation-timing-function: steps(1);
+}
+
+@keyframes anima-bg {
+    0% {
+        background-color: #00d000;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #00d000;
+    }
+}
+
+#cam1 {
+    bottom: 2%;
+    left: 5px;
+}
+
+#cam2 {
+    bottom: 40%;
+    left: 5px;
+}
+
+#cam3 {
+    bottom: 40%;
+    left: 50%;
+}
+
+#cam4 {
+    bottom: 65%;
+    left: 5px;
+}
+
+#cam5 {
+    bottom: 65%;
+    left: 26%;
+}
+
+#cam6 {
+    bottom: 55%;
+    left: 67%;
+}
+
+#cam7 {
+    bottom: 55%;
+    left: 85%;
+}
+
+#cam8 {
+    bottom: 90%;
+    left: 50%;
+}
+
+.video-cam {
+    filter: brightness(0.05);
+    z-index: 15;
+}
+
+#chiado {
+    z-index: 16;
+}

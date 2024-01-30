@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('../../outros/pixel.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'titulo';
+    src: url('../../outros/titulo.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'pixel', sans-serif;
+    cursor: url(../../imagens/fofao-cursor.png), auto;
+}
+
+:root {
+    --z-elementos-sobre-sobre-postos: 2000;
+    --z-sobre-sobre-posicao-video: 1500;
+    --z-elementos-sobrepostos: 1200;
+    --z-sobreposicao-video: 1000;
+    --z-pause: 1500;
+    --z-drb-pause-btnmc: 999;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* div-video ------------- */
+
+#div-video {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.video-visao {
+    filter: brightness(2);
+}
+
+#video-visao-ninguem {
+    filter: brightness(.25);
+}
+
+#div-video video {
+    /* Posiciona o vídeo no centro do contêiner */
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /* Faz o vídeo cobrir todo o contêiner */
+    min-width: 100.01%;
+    min-height: 100.01%;
+    width: auto;
+    height: auto;
+}
+
+.sobreposicao-video {
+    z-index: var(--z-sobreposicao-video);
+}
+
+.sobre-sobre-posicao-video {
+    z-index: var(--z-sobre-sobre-posicao-video);
+}
+
+.elementos-sobrepostos {
+    z-index: var(--z-elementos-sobrepostos) !important;
+}
+
+.elementos-sobre-sobre-postos {
+    z-index: var(--z-elementos-sobre-sobre-postos) !important;
+}
+
+#vitoria-img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    height: 75vh;
+}
+
+#game-over-p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10vh;
+    color: #fff;
+}
+
+@media screen and (max-height:500px) {
+    #div-btn-luz {
+        transform: translateX(-50%) scale(.75);
+    }
+
+    #div-relogio-bateria {
+        transform: scale(.9);
+    }
+
+    .noites {
+        font-size: 4vh;
+    }
+
+    #div-music-box {
+        transform: scale(.7);
+        bottom: 0px;
+        left: 0px;
+    }
+}
+
+/* Display none */
+.preload-video,
+#tela-mobile,
+#tela-cheia,
+#virecel,
+#aviso,
+#conteudo,
+#tela-jornal,
+#tela-inicial,
+#tela-noite,
+#tela-balloon-boy,
+#div-balloon-boy,
+#div-video-visao,
+#tela-transicao-noite,
+#controles,
+#tela-pause,
+#btn-voltar-v-gm,
+#game-over-p,
+#vitoria-img,
+#mascara-img,
+#camera-img,
+#input-zoom,
+#mapa-absolute,
+#video-cam,
+#chiado,
+#luzCam,
+#btn-luz-cam,
+.barra,
+#fofao-energia,
+#jumpscare-fofao,
+#chiado-jumpscare,
+#div-music-box,
+#alerta,
+#alerta-cam {
+    display: none;
+}
+
+.video-cam {
+    display: block !important;
+    visibility: hidden;
+}

@@ -1,0 +1,26 @@
+#virecel {
+    background-color: #000;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dica {
+    font-size: 14px;
+}
+
+a {
+    font-size: 14px;
+}
+
+#conteudo,
+#aviso,
+.div-video,
+#tela-cheia {
+    display: none !important;
+}

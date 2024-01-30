@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="codigos/css/telas.css">
+    <link rel="stylesheet" href="codigos/css/botoes.css">
+    <link rel="stylesheet" href="codigos/css/geral.css">
+    <link rel="stylesheet" href="codigos/css/celular.css" media="screen and (orientation:portrait)">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>fnafão</title>
+</head>
+
+<body>
+    <!-- Pré-carregamento de vídeos -->
+    <div id="div-video">
+        <!-- Câmeras -->
+        <video preload="auto" class="video-cam cameras1 preload-video" id="cam1-com" muted loop>
+            <source src="videos/cam1-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras1 preload-video" id="cam1-sem" muted loop>
+            <source src="videos/cam1-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras2 preload-video" id="cam2-com" muted loop>
+            <source src="videos/cam2-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras2 preload-video" id="cam2-sem" muted loop>
+            <source src="videos/cam2-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras3 preload-video" id="cam3-com" muted>
+            <source src="videos/cam3-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras3 preload-video" id="cam3-sem" muted loop>
+            <source src="videos/cam3-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras4 preload-video" id="cam4-com" muted loop>
+            <source src="videos/cam4-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras4 preload-video" id="cam4-sem" muted loop>
+            <source src="videos/cam4-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras5 preload-video" id="cam5-com" muted loop>
+            <source src="videos/cam5-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras5 preload-video" id="cam5-sem" muted loop>
+            <source src="videos/cam5-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras6 preload-video" id="cam6-com" muted loop>
+            <source src="videos/cam6-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras6 preload-video" id="cam6-sem" muted loop>
+            <source src="videos/cam6-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras7 preload-video" id="cam7-comfc" muted loop>
+            <source src="videos/cam7-comfc.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras7 preload-video" id="cam7-comf" muted loop>
+            <source src="videos/cam7-comf.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras7 preload-video" id="cam7-comc" muted loop>
+            <source src="videos/cam7-comc.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras7 preload-video" id="cam7-sem" muted loop>
+            <source src="videos/cam7-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras8 preload-video" id="cam8-com" muted loop>
+            <source src="videos/cam8-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras8 preload-video" id="cam8-sem" muted loop>
+            <source src="videos/cam8-sem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras8 preload-video" id="cam8-sem2" muted loop>
+            <source src="videos/cam8-sem2.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras8 preload-video" id="cam8-sem3" muted loop>
+            <source src="videos/cam8-sem3.mp4" type="video/mp4">
+        </video>
+
+        <!-- Jumpscare -->
+
+        <video preload="auto" class="preload-video" id="video-chiado-cam">
+            <source src="videos/video-chiado.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video" id="video-chiado">
+            <source src="videos/video-chiado.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video" id="game-over-fofao-video" loop>
+            <source src="videos/game-over-fofao.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video" id="sou-eu">
+            <source src="videos/sou-eu.mp4" type="video/mp4">
+        </video>
+
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video jumpscare" id="jumpscare-chica">
+            <source src="videos/jumpscare-chica.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video jumpscare" id="jumpscare-puppet">
+            <source src="videos/jumpscare-puppet.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video jumpscare" id="jumpscare-foxy">
+            <source src="videos/jumpscare-foxy.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video jumpscare" id="jumpscare-fofao">
+            <source src="videos/jumpscare-fofao.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video jumpscare" id="jumpscare-balloon-boy">
+            <source src="videos/jumpscare-balloon-boy.mp4" type="video/mp4">
+        </video>
+
+        <!-- Video visão -->
+
+        <video preload="auto" class="preload-video video-visao" id="video-visao-ninguem">
+            <source src="videos/video-visao-ninguem.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video video-visao" id="video-visao-chica">
+            <source src="videos/video-visao-chica.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video video-visao" id="video-visao-puppet">
+            <source src="videos/video-visao-puppet.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video video-visao" id="video-visao-fofao">
+            <source src="videos/video-visao-fofao.mp4" type="video/mp4">
+        </video>
+
+        <!-- Outros -->
+
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video" id="manha6">
+            <source src="videos/manha6.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobreposicao-video" id="tela-inicial-video" loop>
+            <source src="videos/tela-inicial.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobreposicao-video" id="video-vitoria" loop>
+            <source src="videos/vitoria.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="preload-video sobre-sobre-posicao-video" id="tela-game-over" loop>
+            <source src="videos/tela-game-over.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Pré-carregamento de áudios -->
+    <audio preload="auto" id="abrir-fechar-camera">
+        <source src="audios/abrir-fechar-camera.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="alarme">
+        <source src="audios/alarme.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="apareceu-porta">
+        <source src="audios/apareceu-porta.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="batidas">
+        <source src="audios/batidas.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="btn-bloqueado">
+        <source src="audios/btn-bloqueado.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="buzzlight" loop>
+        <source src="audios/buzzlight.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="carrossel">
+        <source src="audios/carrossel.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" class="preload-audio audio-tela-inicial" id="chiado">
+        <source src="audios/chiado.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="colocando-mascara">
+        <source src="audios/colocando-mascara.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="corrida-foxy">
+        <source src="audios/corrida-foxy.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="fucinho">
+        <source src="audios/fucinho.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="game-over-fofao-audio">
+        <source src="audios/game-over-fofao.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="game-over-puppet">
+        <source src="audios/game-over-puppet.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="grito-fofao">
+        <source src="audios/grito-fofao.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="grito-foxy">
+        <source src="audios/grito-foxy.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="grito-noite-5">
+        <source src="audios/grito-noite-5.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="hello">
+        <source src="audios/hello.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="hi">
+        <source src="audios/hi.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="manivela" loop>
+        <source src="audios/manivela.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="movendo-camera" loop>
+        <source src="audios/movendo-camera.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="mudando-camera">
+        <source src="audios/mudando-camera.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" class="audio-tela-inicial" id="musica-ucn" loop>
+        <source src="audios/musica-ucn.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="musicbox" loop>
+        <source src="audios/musicbox.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="queda-energia">
+        <source src="audios/queda-energia.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="respiracao-ofegante">
+        <source src="audios/respiracao-ofegante.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="respirando" loop>
+        <source src="audios/respirando.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="risada">
+        <source src="audios/risada.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="risada-loop" loop>
+        <source src="audios/risada.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="ruido-mov-cam" loop>
+        <source src="audios/ruido-mov-cam.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="som-ambiente" loop>
+        <source src="audios/som-ambiente.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="som-ambiente2" loop>
+        <source src="audios/som-ambiente2.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="som-ambiente3" loop>
+        <source src="audios/som-ambiente3.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="telefone">
+        <source src="audios/telefone.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="tirando-mascara">
+        <source src="audios/tirando-mascara.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="ventilador" loop>
+        <source src="audios/ventilador.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="vitoria" loop>
+        <source src="audios/vitoria.ogg" type="audio/ogg">
+    </audio>
+    <audio preload="auto" id="zumbido">
+        <source src="audios/zumbido.ogg" type="audio/ogg">
+    </audio>
+
+    <img src="imagens/mascara.png" alt="" id="mascara-img">
+    <div id="camera-img"></div>
+    <img src="imagens/vitoria.webp" alt="" id="vitoria-img" class="elementos-sobre-sobre-postos">
+    <img src="imagens/alerta.webp" id="alerta" alt="">
+
+
+    <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div id="tela-mobile" class="tela100">
+        <p class="dica">Este site não funciona em dispositivos móveis! Link do site para computador:</p>
+        <a href="https://mwd-oficial.github.io/fnafao/">https://mwd-oficial.github.io/fnafao/</a>
+    </div>
+
+    <div id="tela-cheia" class="tela100">
+        <p class="dica">Clique para ativar a tela cheia</p>
+        <span class="material-symbols-rounded">fullscreen</span>
+    </div>
+
+    <div id="tela-carregamento" class="tela100">
+        <div id="animacao-carregando"></div>
+        <p id="carregando-p">Carregando...</p>
+    </div>
+
+    <div id="virecel">
+        <p class="dica">Aumente o tamanho da tela.</p>
+    </div>
+
+    <div id="aviso">
+        <p>Este jogo pode conter jumpscare (sustos).</p>
+        <div class="btn" id="ok">OK</div>
+    </div>
+
+    <div id="conteudo">
+
+        <div id="div-music-box">
+            <svg width="75" height="75" id="chart"></svg>
+            <div id="div-tutorial-music-box">
+                <div id="btn-music-box">Dar corda na<br>caixa de música</div>
+                <div id="tutorial-music-box">Clique e segure</div>
+            </div>
+        </div>
+
+        <div class="btn btn-voltar-tela-inicial elementos-sobre-sobre-postos" id="btn-voltar-v-gm">Voltar para tela
+            inicial</div>
+        <div id="game-over-p" class="elementos-sobre-sobre-postos">Game<br>Over</div>
+
+        <div id="tela-inicial" class="tela100">
+            <div id="fucinho-div" class="elementos-sobrepostos"></div>
+            <div id="titulo" class="elementos-sobrepostos">
+                <p>Five</p>
+                <p>Nights</p>
+                <p>at</p>
+                <p>Fofão's</p>
+            </div>
+            <div id="div-noites" class="elementos-sobrepostos">
+                <div class="noites active" onclick="defineNoite(0)">Novo jogo</div>
+                <div class="noites" onclick="defineNoite(1)">Noite 1</div>
+                <div class="noites" onclick="defineNoite(2)">Noite 2</div>
+                <div class="noites" onclick="defineNoite(3)">Noite 3</div>
+                <div class="noites" onclick="defineNoite(4)">Noite 4</div>
+                <div class="noites" onclick="defineNoite(5)">Noite 5</div>
+            </div>
+        </div>
+        <div id="tela-noite" class="tela100">
+
+            <div id="tela-balloon-boy" class="tela100"></div>
+            <div id="div-balloon-boy" class="tela100">
+                <img src="imagens/balloon-boy.webp" alt="" id="balloon-boy-img">
+            </div>
+
+            <div class="tela100" id="tela-jornal">
+                <img src="imagens/jornal.webp" alt="" id="jornal-img">
+            </div>
+
+            <div id="tela-transicao-noite" class="tela100">
+                <div id="transicao-info">
+                    <p>12:00 AM</p>
+                    <p class="p-noite"><sup>a</sup> Noite</p>
+                </div>
+            </div>
+
+            <div id="tela-pause">
+                <div id="div-pause">
+                    <div id="btn-close-pause" class="btn"><span class="material-symbols-rounded">close</span></div>
+                    <p>Pause</p>
+                    <div class="btn btn-voltar-tela-inicial">Voltar para a tela inicial</div>
+                </div>
+            </div>
+
+            <div id="controles">
+
+                <div id="div-relogio-bateria" class="elementos-sobrepostos">
+                    <div id="div-relogio">
+                        <p id="relogio">12 AM</p>
+                        <p class="p-noite" style="font-size: 10px;"><sup>a</sup> Noite</p>
+                    </div>
+                    <div id="div-bateria">
+                        <div>
+                            <p id="bateria-p">Bateria: 100%</p>
+                        </div>
+                        <div id="div-uso">
+                            <p>Uso:</p>
+                            <div class="barra"></div>
+                            <div class="barra"></div>
+                            <div class="barra"></div>
+                        </div>
+                    </div>
+                    <div id="btn-mute">Mutar chamada</div>
+                </div>
+
+                <div id="btn-pause" class="btn btn-para-bloquear"><span class="material-symbols-rounded">pause</span>
+                </div>
+
+                <div id="div-btn-left">
+                    <div id="div2-btn-left">
+                        <div class="btn-lr-tutorial elementos-tutorial"><p>Passe o mouse<br>por cima</p></div>
+                        <div id="btn-left-left-left" class="btn-para-bloquear-puppet"></div>
+                        <div id="btn-left-left" class="btn-para-bloquear-puppet"></div>
+                        <div id="btn-left" class="btn-para-bloquear-puppet"></div>
+                    </div>
+                </div>
+                <div id="div-btn-right">
+                    <div id="div2-btn-right">
+                        <div class="btn-lr-tutorial elementos-tutorial"><p>Passe o mouse<br>por cima</p></div>
+                        <div id="btn-right" class="btn-para-bloquear-puppet"></div>
+                        <div id="btn-right-right" class="btn-para-bloquear-puppet"></div>
+                        <div id="btn-right-right-right" class="btn-para-bloquear-puppet"></div>
+                    </div>
+                </div>
+
+                <div id="div-mas-cam-luz">
+                    <div id="div-btn-mascara">
+                        <div id="btn-mascara-tutorial" class="elementos-tutorial"></div>
+                        <div id="btn-mascara" class="btn-para-bloquear">
+                            <div class="seta-cima"></div>
+                            <div class="seta-baixo"></div>
+                        </div>
+                    </div>
+                    <div id="div-btn-luz">
+                        <div id="div-btn-luz-tutorial">
+                            <div id="btn-luz-tutorial" class="elementos-tutorial"></div>
+                            <div id="btn-luz" class="btn-para-bloquear"></div>
+                        </div>
+                        <div id="btn-luz-cabo"></div>
+                    </div>
+                    <div id="div-btn-camera">
+                        <div id="btn-camera-tutorial" class="elementos-tutorial"></div>
+                        <div id="btn-camera" class="btn-para-bloquear elementos-sobrepostos">
+                            <div class="seta-cima"></div>
+                            <div class="seta-baixo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="range" value="50" min="50" max="100" name="" id="input-zoom" class="elementos-sobrepostos">
+
+                <div id="mapa-absolute" class="elementos-sobrepostos">
+                    <div id="mapa-relative">
+                        <p id="mapa-p">Palco</p>
+                        <img src="imagens/mapa.png" id="mapa-img" alt="">
+                        <img src="imagens/alerta.webp" id="alerta-cam" alt="">
+                        <div id="cam1" class="cameras" onclick="cam(1)">cam1</div>
+                        <div id="cam2" class="cameras" onclick="cam(2)">cam2</div>
+                        <div id="cam3" class="cameras" onclick="cam(3)">cam3</div>
+                        <div id="cam4" class="cameras" onclick="cam(4)">cam4</div>
+                        <div id="cam5" class="cameras" onclick="cam(5)">cam5</div>
+                        <div id="cam6" class="cameras" onclick="cam(6)">cam6</div>
+                        <div id="cam7" class="cameras" onclick="cam(7)">cam7</div>
+                        <div id="cam8" class="cameras" onclick="cam(8)">cam8</div>
+                    </div>
+                </div>
+                <div id="btn-luz-cam" class="elementos-tutorial">
+                    <p>Acender luz:</p>
+                    <ul>
+                        <li>Segure mouse</li>
+                        <li>tecla espaco</li>
+                    </ul>
+                    <p>Zoom nas cameras:</p>
+                    <ul>
+                        <li>Ajustador de zoom</li>
+                        <li>Rolagem do mouse</li>
+                    </ul>
+                    <p>Mover cameras:</p>
+                    <ul>
+                        <li>W / ↑ - Cima</li>
+                        <li>A / ← - Esquerda</li>
+                        <li>S / → - Baixo</li>
+                        <li>D / ↓ - Direita</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="codigos/js/variaveis.js"></script>
+        <script src="codigos/js/iniciacao.js"></script>
+        <script src="codigos/js/botoes.js"></script>
+        <script src="codigos/js/camera.js"></script>
+        <script src="codigos/js/intervalos.js"></script>
+        <script src="codigos/js/movimentacao.js"></script>
+        <script src="codigos/js/ataque.js"></script>
+        <script src="codigos/js/jumpscare.js"></script>
+</body>
+
+</html>
