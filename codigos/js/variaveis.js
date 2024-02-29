@@ -15,6 +15,7 @@ var telaGameOver = document.querySelector("#tela-game-over")
 var telaBalloonBoy = document.querySelector("#tela-balloon-boy")
 var divBalloonBoy = document.querySelector("#div-balloon-boy")
 
+var p12 = document.querySelector("#p-12")
 var pNoite = document.querySelectorAll(".p-noite")
 var controles = document.querySelector("#controles")
 var noites = document.querySelectorAll(".noites")
@@ -106,6 +107,8 @@ var cam8Com = document.querySelector("#cam8-com")
 var cam8Sem = document.querySelector("#cam8-sem")
 var cam8Sem2 = document.querySelector("#cam8-sem2")
 var cam8Sem3 = document.querySelector("#cam8-sem3")
+var cam9Com = document.querySelector("#cam9-com")
+var cam9Sem = document.querySelector("#cam9-sem")
 
 var videoChiadoCam = document.querySelector("#video-chiado-cam")
 var videoChiado = document.querySelector("#video-chiado")
@@ -137,8 +140,10 @@ var btnBloqueado = document.querySelector("#btn-bloqueado")
 var buzzlight = document.querySelector("#buzzlight")
 var carrossel = document.querySelector("#carrossel")
 var chiado = document.querySelector("#chiado")
+var choque = document.querySelector("#choque")
 var colocandoMascara = document.querySelector("#colocando-mascara")
 var corridaFoxy = document.querySelector("#corrida-foxy")
+var energiaVoltou = document.querySelector("#energia-voltou")
 var fucinho = document.querySelector("#fucinho")
 var gameOverFofaoAudio = document.querySelector("#game-over-fofao-audio")
 var gameOverPuppet = document.querySelector("#game-over-puppet")
@@ -152,6 +157,8 @@ var movendoCamera = document.querySelector("#movendo-camera")
 var mudandoCamera = document.querySelector("#mudando-camera")
 var musicaUcn = document.querySelector("#musica-ucn")
 var musicbox = document.querySelector("#musicbox")
+var portaAudio = document.querySelector("#porta-audio")
+var pulo = document.querySelector("#pulo")
 var quedaEnergia = document.querySelector("#queda-energia")
 var respiracaoOfegante = document.querySelector("#respiracao-ofegante")
 var respirando = document.querySelector("#respirando")
@@ -162,6 +169,7 @@ var somAmbiente = document.querySelector("#som-ambiente")
 var somAmbiente3 = document.querySelector("#som-ambiente3")
 var somAmbiente2 = document.querySelector("#som-ambiente2")
 var telefone = document.querySelector("#telefone")
+var terraria = document.querySelector("#terraria")
 var tirandoMascara = document.querySelector("#tirando-mascara")
 var ventilador = document.querySelector("#ventilador")
 var vitoria = document.querySelector("#vitoria")
@@ -175,6 +183,9 @@ var mascaraImg = document.querySelector("#mascara-img")
 var cameraImg = document.querySelector("#camera-img")
 var vitoriaImg = document.querySelector("#vitoria-img")
 var balloonBoyImg = document.querySelector("#balloon-boy-img")
+
+
+
 
 
 
@@ -225,8 +236,6 @@ var velBtnLR
 
 
 
-
-
 // Valores booleanos
 var jogoPausado = false
 var jogoPausadoTotalHoras = false
@@ -268,6 +277,9 @@ var ataqueBalloonBoy = false
 
 var spaceLuz = false
 var spaceLuzCam = false
+
+
+
 
 
 

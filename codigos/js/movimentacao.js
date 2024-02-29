@@ -490,6 +490,7 @@ function balloonBoy() {
             passosBalloonBoy++
             console.log("passosBalloonBoy: " + passosBalloonBoy)
             ataque()
+            movimentacao(9)
         }
     } else {
         sorteioFalaBalloonBoy = Math.round(Math.random() * 2)

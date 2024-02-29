@@ -37,7 +37,7 @@
         <video preload="auto" class="video-cam cameras3 preload-video" id="cam3-sem" muted loop>
             <source src="videos/cam3-sem.mp4" type="video/mp4">
         </video>
-        <video preload="auto" class="video-cam cameras4 preload-video" id="cam4-com" muted loop>
+            <video preload="auto" class="video-cam cameras4 preload-video" id="cam4-com" muted loop>
             <source src="videos/cam4-com.mp4" type="video/mp4">
         </video>
         <video preload="auto" class="video-cam cameras4 preload-video" id="cam4-sem" muted loop>
@@ -78,6 +78,12 @@
         </video>
         <video preload="auto" class="video-cam cameras8 preload-video" id="cam8-sem3" muted loop>
             <source src="videos/cam8-sem3.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras9 preload-video" id="cam9-com" muted loop>
+            <source src="videos/cam9-com.mp4" type="video/mp4">
+        </video>
+        <video preload="auto" class="video-cam cameras9 preload-video" id="cam9-sem" muted loop>
+            <source src="videos/cam9-sem.mp4" type="video/mp4">
         </video>
 
         <!-- Jumpscare -->
@@ -255,6 +261,7 @@
         <source src="audios/zumbido.ogg" type="audio/ogg">
     </audio>
 
+
     <img src="imagens/mascara.png" alt="" id="mascara-img">
     <div id="camera-img"></div>
     <img src="imagens/vitoria.webp" alt="" id="vitoria-img" class="elementos-sobre-sobre-postos">
@@ -262,6 +269,7 @@
 
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 
     <div id="tela-mobile" class="tela100">
         <p class="dica">Este site não funciona em dispositivos móveis! Link do site para computador:</p>
@@ -317,6 +325,7 @@
                 <div class="noites" onclick="defineNoite(4)">Noite 4</div>
                 <div class="noites" onclick="defineNoite(5)">Noite 5</div>
             </div>
+             <a href="https://mwd-oficial.github.io/sobre" target="_blank"><img src="imagens/logoMWDt.png" alt="" id="logoMWD"></a>
         </div>
         <div id="tela-noite" class="tela100">
 
@@ -331,7 +340,7 @@
 
             <div id="tela-transicao-noite" class="tela100">
                 <div id="transicao-info">
-                    <p>12:00 AM</p>
+                    <p id="p-12">12:00 AM</p>
                     <p class="p-noite"><sup>a</sup> Noite</p>
                 </div>
             </div>
@@ -365,12 +374,13 @@
                     <div id="btn-mute">Mutar chamada</div>
                 </div>
 
-                <div id="btn-pause" class="btn btn-para-bloquear"><span class="material-symbols-rounded">pause</span>
-                </div>
+                <div id="btn-pause" class="btn btn-para-bloquear"><span class="material-symbols-rounded">pause</span></div>
 
                 <div id="div-btn-left">
                     <div id="div2-btn-left">
-                        <div class="btn-lr-tutorial elementos-tutorial"><p>Passe o mouse<br>por cima</p></div>
+                        <div class="btn-lr-tutorial elementos-tutorial">
+                            <p>Passe o mouse<br>por cima</p>
+                        </div>
                         <div id="btn-left-left-left" class="btn-para-bloquear-puppet"></div>
                         <div id="btn-left-left" class="btn-para-bloquear-puppet"></div>
                         <div id="btn-left" class="btn-para-bloquear-puppet"></div>
@@ -378,7 +388,9 @@
                 </div>
                 <div id="div-btn-right">
                     <div id="div2-btn-right">
-                        <div class="btn-lr-tutorial elementos-tutorial"><p>Passe o mouse<br>por cima</p></div>
+                        <div class="btn-lr-tutorial elementos-tutorial">
+                            <p>Passe o mouse<br>por cima</p>
+                        </div>
                         <div id="btn-right" class="btn-para-bloquear-puppet"></div>
                         <div id="btn-right-right" class="btn-para-bloquear-puppet"></div>
                         <div id="btn-right-right-right" class="btn-para-bloquear-puppet"></div>
@@ -424,6 +436,7 @@
                         <div id="cam6" class="cameras" onclick="cam(6)">cam6</div>
                         <div id="cam7" class="cameras" onclick="cam(7)">cam7</div>
                         <div id="cam8" class="cameras" onclick="cam(8)">cam8</div>
+                        <div id="cam9" class="cameras" onclick="cam(9)">cam?</div>
                     </div>
                 </div>
                 <div id="btn-luz-cam" class="elementos-tutorial">
@@ -448,15 +461,16 @@
 
             </div>
         </div>
-
-        <script src="codigos/js/variaveis.js"></script>
-        <script src="codigos/js/iniciacao.js"></script>
-        <script src="codigos/js/botoes.js"></script>
-        <script src="codigos/js/camera.js"></script>
-        <script src="codigos/js/intervalos.js"></script>
-        <script src="codigos/js/movimentacao.js"></script>
-        <script src="codigos/js/ataque.js"></script>
-        <script src="codigos/js/jumpscare.js"></script>
+    </div>
+    <script src="codigos/js/variaveis.js"></script>
+    <script src="codigos/js/iniciacao.js"></script>
+    <script src="codigos/js/botoes.js"></script>
+    <script src="codigos/js/camera.js"></script>
+    <script src="codigos/js/intervalos.js"></script>
+    <script src="codigos/js/movimentacao.js"></script>
+    <script src="codigos/js/ataque.js"></script>
+    <script src="codigos/js/jumpscare.js"></script>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
 </body>
 
 </html>

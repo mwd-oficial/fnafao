@@ -4,7 +4,7 @@ document.addEventListener('visibilitychange', function () {
         if (telaNoite.style.display == "block") {
             telaPause.style.display = "flex"
         }
-        if (jogoPausado == false) {
+        if (!jogoPausado) {
             pausarJogo()
         }
     } else {
@@ -49,7 +49,7 @@ document.addEventListener("fullscreenchange", function () {
     } else {
         console.log('O modo de tela cheia não está ativado');
         telaCheia.style.display = "flex"
-        if (jogoPausado == false) {
+        if (!jogoPausado) {
             pausarJogo()
         }
     }
@@ -84,12 +84,14 @@ function iniciaJogo() {
 
 fucinhoDiv.addEventListener("click", clickFofao)
 function clickFofao() {
-    console.log("fucinho chamado")
     fucinho.load()
     fucinho.play()
 }
 
 function voltarTelaIni() {
+
+    document.body.style.cursor = "url(../../imagens/fofao-cursor.png), auto"
+    cam9.style.display = "none"
 
     noitesAtivas = document.querySelectorAll(".noites.active")
     for (let i = 0; i < noitesAtivas.length; i++) {
@@ -138,6 +140,8 @@ function voltarTelaIni() {
 
     jornalImg.style.opacity = 0
 
+    p12.style.display = "block"
+
     for (let i = 0; i < videoVisao.length; i++) {
         videoVisao[i].style.display = "none"
     }
@@ -157,6 +161,7 @@ function voltarTelaIni() {
         colocandoTirandoMascara()
     }
 
+
     limparIntervalos()
 }
 
@@ -170,7 +175,6 @@ function configAudio() {
     for (let i = 0; i < audioTelaInicial.length; i++) {
         audioTelaInicial[i].volume = 0.125
     }
-
     somAmbiente2.volume = 0.5
 
     manha6.volume = 0.25
@@ -205,7 +209,9 @@ function defineNoite(numNoite) {
         noite = 1
         defineNoite(1)
         for (let i = 1; i < noites.length; i++) {
-            noites[i].classList.remove("active")
+            if (i != 6) {
+                noites[i].classList.remove("active")
+            }
         }
     } else {
         for (let i = 0; i < pNoite.length; i++) {
@@ -277,6 +283,7 @@ function iniciaNoite() {
 
     if (noite == 5) {
         gritoNoite5.play()
+        cam9.style.display = "block"
     }
 
     console.clear();
@@ -369,7 +376,8 @@ function reiniciaVariaveis() {
         'cameras5': Array.from(document.querySelectorAll('.cameras5')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
         'cameras6': Array.from(document.querySelectorAll('.cameras6')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
         'cameras7': Array.from(document.querySelectorAll('.cameras7')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
-        'cameras8': Array.from(document.querySelectorAll('.cameras8')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 }))
+        'cameras8': Array.from(document.querySelectorAll('.cameras8')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
+        'cameras9': Array.from(document.querySelectorAll('.cameras9')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 }))
     };
     keys = {};
     inputValues = {
@@ -380,7 +388,8 @@ function reiniciaVariaveis() {
         'cameras5': 50,
         'cameras6': 50,
         'cameras7': 50,
-        'cameras8': 50
+        'cameras8': 50,
+        'cameras9': 50
     };
 }
 
@@ -528,6 +537,20 @@ function gerenciaNoite() {
 
 function pausarJogo() {
     jogoPausado = true
+    audiosTocando = []; // Limpa o array
+    videosRodando = []; // Limpa o array
+    for (let i = 0; i < videoGeral.length; i++) {
+        if (!videoGeral[i].paused) {
+            videosRodando.push(i); // Armazena o índice do vídeo que estava tocando
+            videoGeral[i].pause();
+        }
+    }
+    for (let i = 0; i < audioGeral.length; i++) {
+        if (!audioGeral[i].paused) {
+            audiosTocando.push(i); // Armazena o índice do áudio que estava tocando
+            audioGeral[i].pause();
+        }
+    }
     pausarHoras()
     pausarTotalHoras()
     pausarChica()
@@ -544,20 +567,6 @@ function pausarJogo() {
     clearInterval(intervaloPuppet);
     clearInterval(sustoInterval)
     clearInterval(alarmeDelay)
-    audiosTocando = []; // Limpa o array
-    videosRodando = []; // Limpa o array
-    for (let i = 0; i < videoGeral.length; i++) {
-        if (!videoGeral[i].paused) {
-            videosRodando.push(i); // Armazena o índice do vídeo que estava tocando
-            videoGeral[i].pause();
-        }
-    }
-    for (let i = 0; i < audioGeral.length; i++) {
-        if (!audioGeral[i].paused) {
-            audiosTocando.push(i); // Armazena o índice do áudio que estava tocando
-            audioGeral[i].pause();
-        }
-    }
 }
 
 function despausarJogo() {

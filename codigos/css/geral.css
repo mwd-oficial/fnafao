@@ -13,7 +13,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'pixel', sans-serif;
-    cursor: url(../../imagens/fofao-cursor.png), auto;
 }
 
 :root {
@@ -41,6 +40,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: url(../../imagens/fofao-cursor.png), auto;
     -webkit-user-select: none;
     /* Safari */
     -moz-user-select: none;
@@ -119,6 +119,23 @@ p {
     color: #fff;
 }
 
+#logoMWD {
+    width: 125px;
+    margin: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition-duration: 0.5s;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: var(--z-elementos-sobrepostos);
+}
+
+#logoMWD:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
 @media screen and (max-height:500px) {
     #div-btn-luz {
         transform: translateX(-50%) scale(.75);
@@ -172,7 +189,9 @@ p {
 #chiado-jumpscare,
 #div-music-box,
 #alerta,
-#alerta-cam {
+#alerta-cam,
+#cam9,
+.raio-div {
     display: none;
 }
 

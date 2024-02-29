@@ -300,12 +300,28 @@ function movimentacao(nc) {
             }
 
         }
+        if (nc === 9) {
+            mapaP.innerHTML = "???"
+            if (passosBalloonBoy === 0) {
+                for (let i = 0; i < videoCam.length; i++) {
+                    videoCam[i].style.visibility = "hidden"
+                }
+                cam9Com.style.visibility = "visible"
+                cam9Com.play()
+            } else if (passosBalloonBoy === 1) {
+                for (let i = 0; i < videoCam.length; i++) {
+                    videoCam[i].style.visibility = "hidden"
+                }
+                cam9Sem.style.visibility = "visible"
+                cam9Sem.play()
+            }
+        }
     }
 }
 
 
 document.addEventListener("keydown", function (event) {
-    if (jogoPausado == false && event.code === 'Space' && camera == true && spaceLuzCam == false) {
+    if (jogoPausado == false && event.code === 'Space' && camera == true && spaceLuzCam == false && telaNoite.style.display == "block") {
         spaceLuzCam = true
         if (luzCamAcesa == false) {
             clickLuzCam()
@@ -378,7 +394,8 @@ var videos = {
     'cameras5': Array.from(document.querySelectorAll('.cameras5')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
     'cameras6': Array.from(document.querySelectorAll('.cameras6')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
     'cameras7': Array.from(document.querySelectorAll('.cameras7')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
-    'cameras8': Array.from(document.querySelectorAll('.cameras8')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 }))
+    'cameras8': Array.from(document.querySelectorAll('.cameras8')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
+    'cameras9': Array.from(document.querySelectorAll('.cameras9')).map(element => ({ element: element, zoom: 1, x: 0, y: 0 })),
 };
 
 var keys = {};
@@ -391,7 +408,8 @@ var inputValues = {
     'cameras5': 50,
     'cameras6': 50,
     'cameras7': 50,
-    'cameras8': 50
+    'cameras8': 50,
+    'cameras9': 50,
 };
 
 window.addEventListener('wheel', function (e) {

@@ -237,7 +237,7 @@ function atualizaCurrentTime() {
 
 
 document.addEventListener("keydown", function (event) {
-    if (jogoPausado == false && event.code === 'Space' && camera == false && spaceLuz == false) {
+    if (!jogoPausado && event.code === 'Space' && !camera && !spaceLuz && telaNoite.style.display == "block") {
         spaceLuz = true
         if (luzAcesa == false) {
             clickLuz()
