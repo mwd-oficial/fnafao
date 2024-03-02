@@ -3,6 +3,8 @@ var telaCarregamento = document.querySelector("#tela-carregamento")
 var aviso = document.querySelector("#aviso")
 var ok = document.querySelector("#ok")
 var conteudo = document.querySelector("#conteudo")
+var confete = document.querySelector("#confete")
+var timeoutConfete
 
 var telaMobile = document.querySelector("#tela-mobile")
 var telaCheia = document.querySelector("#tela-cheia")

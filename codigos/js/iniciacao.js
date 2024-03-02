@@ -57,6 +57,13 @@ document.addEventListener("fullscreenchange", function () {
 
 window.addEventListener("load", jogoCarregadof)
 function jogoCarregadof() {
+    var images = document.getElementsByTagName('img');
+    for (var i = 0; i < images.length; i++) {
+        images[i].onmousedown = function(e) {
+            if (e.preventDefault) e.preventDefault();
+            return false;
+        }
+    }
     setTimeout(() => {
         if (!document.fullscreenElement) {
             telaCheia.style.display = "flex"
@@ -83,14 +90,23 @@ function iniciaJogo() {
 }
 
 fucinhoDiv.addEventListener("click", clickFofao)
+fucinhoDiv.addEventListener("click", aparecerConfete)
 function clickFofao() {
     fucinho.load()
     fucinho.play()
 }
 
+function aparecerConfete() {
+    fucinhoDiv.removeEventListener("click", aparecerConfete)
+    confete.style.display = "block"
+    timeoutConfete = setTimeout(() => {
+        confete.style.display = "none"
+        fucinhoDiv.addEventListener("click", aparecerConfete)
+    }, 4000);
+}
+
 function voltarTelaIni() {
 
-    document.body.style.cursor = "url(../../imagens/fofao-cursor.png), auto"
     cam9.style.display = "none"
 
     noitesAtivas = document.querySelectorAll(".noites.active")
