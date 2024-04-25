@@ -85,12 +85,86 @@ a {
     z-index: 1000;
 }
 
+#model-viewer-alert {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.75);
+    font-size: 14px;
+    font-family: 'titulo', sans-serif;
+    font-weight: bolder;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 100px;
+    opacity: 0;
+    z-index: 1204;
+    display: none;
+}
+
+@keyframes aparecer-alerta {
+    0% {
+        top: -50px;
+        transform: translateX(-50%) scale(0.75);
+        opacity: 0;
+    }
+    10% {
+        top: 50px;
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    90% {
+        top: 50px;
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        top: -50px;
+        transform: translateX(-50%) scale(0.75);
+        opacity: 0;
+    }
+}
+
 #confete {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 1202 !important;
+}
+
+#model-viewer-div {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: brightness(0.5) blur(10px);
+    z-index: 1201 !important;
     display: none;
+}
+
+model-viewer {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1203 !important;
+    display: none;
+}
+
+#x-model-viewer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1204 !important;
+    display: none;
+}
+
+#x-model-viewer span {
+    font-size: 100px;
+    color: #fffa;
+    transition-duration: .5s;
+}
+
+#x-model-viewer span:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(20px);
 }
 
 #titulo {

@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <title>fnafão</title>
 </head>
 
@@ -266,7 +267,6 @@
     <div id="camera-img"></div>
     <img src="imagens/vitoria.webp" alt="" id="vitoria-img" class="elementos-sobre-sobre-postos">
     <img src="imagens/alerta.webp" id="alerta" alt="">
-    <img src="imagens/confete.gif" alt="confete" id="confete" class="elementos-sobrepostos">
 
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -312,6 +312,9 @@
 
         <div id="tela-inicial" class="tela100">
             <div id="fucinho-div" class="elementos-sobrepostos"></div>
+            <div id="model-viewer-alert">Pelúcia do fofão desbloqueada!</div>
+            <div id="x-model-viewer"><span class="material-symbols-rounded">close</span></div>
+            <div id="model-viewer-div"></div>
             <div id="titulo" class="elementos-sobrepostos">
                 <p>Five</p>
                 <p>Nights</p>
@@ -373,6 +376,7 @@
                         </div>
                     </div>
                     <div id="btn-mute">Mutar chamada</div>
+                    <img src="imagens/fofao-model-viewer.png" alt="" id="model-viewer-img">
                 </div>
 
                 <div id="btn-pause" class="btn btn-para-bloquear"><span class="material-symbols-rounded">pause</span></div>

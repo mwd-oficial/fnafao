@@ -3,7 +3,7 @@ var telaCarregamento = document.querySelector("#tela-carregamento")
 var aviso = document.querySelector("#aviso")
 var ok = document.querySelector("#ok")
 var conteudo = document.querySelector("#conteudo")
-var confete = document.querySelector("#confete")
+var confete 
 var timeoutConfete
 
 var telaMobile = document.querySelector("#tela-mobile")
@@ -36,6 +36,12 @@ var zoomCamera
 
 // Seleção botões e envolvidos
 var fucinhoDiv = document.querySelector("#fucinho-div")
+var modelViewerDiv = document.querySelector("#model-viewer-div")
+var modelViewer
+var xModelViewer = document.querySelector("#x-model-viewer")
+var modelViewerAlert = document.querySelector("#model-viewer-alert")
+var modelViewerImg = document.querySelector("#model-viewer-img")
+
 var relogio = document.querySelector("#relogio")
 var btnMute = document.querySelector("#btn-mute")
 var btnPause = document.querySelector("#btn-pause")
@@ -280,7 +286,7 @@ var ataqueBalloonBoy = false
 var spaceLuz = false
 var spaceLuzCam = false
 
-
+var pelucia = false
 
 
 

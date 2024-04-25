@@ -91,6 +91,14 @@
     box-shadow: 0px 0px 20px 0px #666666;
 }
 
+#model-viewer-img {
+    position: absolute;
+    top: 125%;
+    left: -10px;
+    width: 100px;
+    display: none;
+}
+
 #btn-pause,
 #btn-pause-pixel,
 #btn-close-pause {

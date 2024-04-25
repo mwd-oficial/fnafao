@@ -59,7 +59,7 @@ window.addEventListener("load", jogoCarregadof)
 function jogoCarregadof() {
     var images = document.getElementsByTagName('img');
     for (var i = 0; i < images.length; i++) {
-        images[i].onmousedown = function(e) {
+        images[i].onmousedown = function (e) {
             if (e.preventDefault) e.preventDefault();
             return false;
         }
@@ -89,8 +89,10 @@ function iniciaJogo() {
     }, 1);
 }
 
+modelViewerImg.addEventListener("click", clickFofao)
 fucinhoDiv.addEventListener("click", clickFofao)
 fucinhoDiv.addEventListener("click", aparecerConfete)
+fucinhoDiv.addEventListener("click", aparecerModelViewer)
 function clickFofao() {
     fucinho.load()
     fucinho.play()
@@ -98,12 +100,57 @@ function clickFofao() {
 
 function aparecerConfete() {
     fucinhoDiv.removeEventListener("click", aparecerConfete)
-    confete.style.display = "block"
+    //confete.style.display = "block"
+    confete = document.createElement("img")
+    confete.src = "imagens/confete.gif"
+    confete.id = "confete"
+    document.body.appendChild(confete)
     timeoutConfete = setTimeout(() => {
-        confete.style.display = "none"
+        //confete.style.display = "none"
+        document.body.removeChild(confete)
         fucinhoDiv.addEventListener("click", aparecerConfete)
     }, 4000);
 }
+
+function aparecerModelViewer() {
+    modelViewer = document.createElement("model-viewer")
+    telaInicial.appendChild(modelViewer)
+    modelViewer.src = "../../outros/fofao.glb"
+    modelViewer.cameraOrbit = "1.554433865057452rad 1.5135277107138336rad 3.2000531144371713m"
+    modelViewer.minFieldOfView = "50deg"
+
+    modelViewer.style.display = "block"
+    modelViewerDiv.style.display = "block"
+    xModelViewer.style.display = "block"
+    
+    if (!pelucia) {
+        pelucia = true
+        setTimeout(() => {
+            modelViewerAlert.style.display = "block"
+            modelViewerAlert.style.animation = "aparecer-alerta 5s linear"
+            setTimeout(() => {
+                modelViewerAlert.style.display = "none"
+            }, 5000);
+        }, 2000);
+    }
+
+    modelViewer.addEventListener("load", function () {
+        modelViewer.autoRotate = true
+        modelViewer.interactionPromptStyle = "basic"
+        modelViewer.rotationPerSecond = "45deg"
+        modelViewer.cameraControls = true
+        modelViewer.disablePan = true
+        modelViewer.disableZoom = true
+    })
+}
+
+xModelViewer.addEventListener("click", function () {
+    modelViewer.style.display = "none"
+    modelViewerDiv.style.display = "none"
+    this.style.display = "none"
+    telaInicial.removeChild(modelViewer)
+})
+
 
 function voltarTelaIni() {
 
@@ -300,6 +347,10 @@ function iniciaNoite() {
     if (noite == 5) {
         gritoNoite5.play()
         cam9.style.display = "block"
+    }
+
+    if (pelucia) {
+        modelViewerImg.style.display = "block"
     }
 
     console.clear();

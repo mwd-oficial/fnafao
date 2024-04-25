@@ -51,6 +51,10 @@ body {
     /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 
+a:hover {
+    cursor: url(../../imagens/fofao-cursor.png), auto;
+}
+
 p {
     color: white;
     font-size: 20px;
