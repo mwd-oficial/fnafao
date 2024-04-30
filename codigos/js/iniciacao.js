@@ -113,7 +113,6 @@ function aparecerConfete() {
 }
 
 function aparecerModelViewer() {
-    modelViewer = document.querySelector("model-viewer")
     modelViewer.style.display = "block"
     modelViewerDiv.style.display = "block"
     xModelViewer.style.display = "block"
