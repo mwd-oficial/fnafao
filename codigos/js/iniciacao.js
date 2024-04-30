@@ -113,8 +113,9 @@ function aparecerConfete() {
 }
 
 function aparecerModelViewer() {
-    modelViewer = document.querySelector("model-viewer")
-    modelViewer.src = "../../fofao.glb"
+    modelViewer = document.createElement("model-viewer")
+    telaInicial.appendChild(modelViewer)
+    modelViewer.src = "../../outros/logomwdt.glb"
     modelViewer.cameraOrbit = "1.554433865057452rad 1.5135277107138336rad 3.2000531144371713m"
     modelViewer.minFieldOfView = "50deg"
 
@@ -147,6 +148,7 @@ xModelViewer.addEventListener("click", function () {
     modelViewer.style.display = "none"
     modelViewerDiv.style.display = "none"
     this.style.display = "none"
+    telaInicial.removeChild(modelViewer)
 })
 
 
