@@ -37,7 +37,7 @@ var zoomCamera
 // Seleção botões e envolvidos
 var fucinhoDiv = document.querySelector("#fucinho-div")
 var modelViewerDiv = document.querySelector("#model-viewer-div")
-var modelViewer = document.querySelector("model-viewer")
+var modelViewer
 var xModelViewer = document.querySelector("#x-model-viewer")
 var modelViewerAlert = document.querySelector("#model-viewer-alert")
 var modelViewerImg = document.querySelector("#model-viewer-img")

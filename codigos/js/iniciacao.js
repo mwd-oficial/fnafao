@@ -100,19 +100,23 @@ function clickFofao() {
 
 function aparecerConfete() {
     fucinhoDiv.removeEventListener("click", aparecerConfete)
-    //confete.style.display = "block"
     confete = document.createElement("img")
     confete.src = "imagens/confete.gif"
     confete.id = "confete"
     document.body.appendChild(confete)
     timeoutConfete = setTimeout(() => {
-        //confete.style.display = "none"
         document.body.removeChild(confete)
         fucinhoDiv.addEventListener("click", aparecerConfete)
     }, 4000);
 }
 
 function aparecerModelViewer() {
+    modelViewer = document.createElement("model-viewer")
+    telaInicial.appendChild(modelViewer)
+    modelViewer.src = "outros/fofao.glb"
+    modelViewer.cameraOrbit = "1.554433865057452rad 1.5135277107138336rad 3.2000531144371713m"
+    modelViewer.minFieldOfView = "50deg"
+
     modelViewer.style.display = "block"
     modelViewerDiv.style.display = "block"
     xModelViewer.style.display = "block"
@@ -128,12 +132,21 @@ function aparecerModelViewer() {
         }, 2000);
     }
 
+    modelViewer.addEventListener("load", function () {
+        modelViewer.autoRotate = true
+        modelViewer.interactionPromptStyle = "basic"
+        modelViewer.rotationPerSecond = "45deg"
+        modelViewer.cameraControls = true
+        modelViewer.disablePan = true
+        modelViewer.disableZoom = true
+    })
 }
 
 xModelViewer.addEventListener("click", function () {
     modelViewer.style.display = "none"
     modelViewerDiv.style.display = "none"
     this.style.display = "none"
+    telaInicial.removeChild(modelViewer)
 })
 
 
